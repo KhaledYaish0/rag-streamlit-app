@@ -13,16 +13,22 @@ uploaded_file = st.file_uploader("Upload your PDF", type=["pdf"])
 
 # Initialize RagEngine (will be created only when PDF is uploaded)
 rag = None
-
 if uploaded_file:
+    # ✅ Toast to show PDF is uploaded
+    st.toast("📄 PDF uploaded!")
+
     with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
         tmp_file.write(uploaded_file.read())
         tmp_path = tmp_file.name
 
     st.success(f"PDF uploaded: {uploaded_file.name}")
+    print(f"✅ Uploaded file saved at: {tmp_path}")
 
     # 🔁 Build the index dynamically from the uploaded PDF
     rag = RagEngine(pdf_path=tmp_path, build_index=True)
+
+    st.toast("🤖 RAG Engine initialized!")
+    print("✅ RagEngine created and index built.")
 
     # Input for user's question
     user_question = st.text_input("📄 Your Question", placeholder="Ask something about the PDF...")
