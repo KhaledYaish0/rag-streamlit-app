@@ -9,3 +9,4 @@ index.faiss
 *.sqlite3
 .env
 .DS_Store
+rag_index_final/
