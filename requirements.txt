@@ -1,0 +1,7 @@
+﻿pyPDF2
+sentence-transformers
+faiss-cpu
+numpy
+pandas
+streamlit
+rapidfuzz
