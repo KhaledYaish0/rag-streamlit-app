@@ -1,22 +1,22 @@
-# 📄🔍 RAG PDF Question Answering App
+# RAG PDF Question Answering App
 
 This project is a **streamlit-based RAG (Retrieval-Augmented Generation)** app that allows users to upload a PDF, ask questions about its content, and receive AI-generated answers with cited evidence.
 
-🌐 **Live Demo**: [Try it here](https://rag-app-stremlit-khaledyaish.streamlit.app/)
+ **Live Demo**: [Try it here](https://rag-app-stremlit-khaledyaish.streamlit.app/)
 
 ---
 
-## 💡 Features
+## Features
 
-- 📤 Upload any PDF document.
-- 💬 Ask natural language questions about its content.
-- 🧠 Uses FAISS + Sentence Transformers for fast document search.
-- 📑 Evidence snippets with page numbers.
-- 🧾 BART summarizer for accurate, concise answers.
+- Upload any PDF document.
+- Ask natural language questions about its content.
+- Uses FAISS + Sentence Transformers for fast document search.
+- Evidence snippets with page numbers.
+- BART summarizer for accurate, concise answers.
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 
 ```
 rag-streamlit-app/
@@ -32,7 +32,7 @@ rag-streamlit-app/
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 Install dependencies locally with:
 
@@ -44,7 +44,7 @@ Or deploy directly to [Streamlit Cloud](https://streamlit.io/cloud).
 
 ---
 
-## 🚀 How It Works
+## How It Works
 
 1. Upload a PDF.
 2. PDF gets split into chunks and vectorized using SentenceTransformer.
@@ -55,11 +55,11 @@ Or deploy directly to [Streamlit Cloud](https://streamlit.io/cloud).
 
 ---
 
-## 📝 License
+## License
 
 MIT License — feel free to modify and use.
 
 ---
 
-## 🧠 Made by Khaled Yaish
+## Made by Khaled Yaish
 [GitHub](https://github.com/KhaledYaish0) | [LinkedIn](https://www.linkedin.com/in/khaledyaish)
