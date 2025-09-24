@@ -1,78 +1,42 @@
-# 🔍 RAG Streamlit App
+# 🧠 RAG Streamlit App
 
-A simple and interactive Retrieval-Augmented Generation (RAG) app powered by FAISS, Sentence Transformers, and HuggingFace models – with a Streamlit interface for querying local documents.
-
----
+This is a Retrieval-Augmented Generation (RAG) app built with **Streamlit**, allowing you to upload a PDF and ask questions about its content using semantic search and summarization.
 
 ## 🚀 Features
+- 📄 Upload any PDF document.
+- 🔍 Ask natural language questions about the content.
+- 🤖 Uses Sentence Transformers + CrossEncoder reranking.
+- 📚 Generates answers with BART summarizer.
+- ⚡ Built-in FAISS for fast similarity search.
+- 🌐 Fully deployable on [Streamlit Cloud](https://streamlit.io/cloud).
 
-- 🔎 Semantic search over your own documents using FAISS
-- 🧠 Uses SentenceTransformer for dense retrieval
-- 📰 Summarization using BART (`facebook/bart-large-cnn`)
-- 🖥️ Clean interface with **Streamlit**
-- 📂 Index management with metadata JSON and FAISS files
-
----
-
-## 📁 Project Structure
-
+## 📂 Project Structure
 ```
-.
-├── app_streamlit.py       # Main Streamlit UI
-├── rag_final.py           # Final RAG logic (retrieval + generation)
-├── rag_dynamic.py         # Flexible version of RAG
-├── requirements.txt       # List of Python dependencies
-├── meta.json              # Metadata for indexed chunks
-├── index.faiss            # FAISS vector index
-└── .gitignore             # Files to be ignored by Git
+├── app_streamlit.py       # Main Streamlit frontend app
+├── rag_final.py           # RAG backend logic (embedding, indexing, reranking, answering)
+├── requirements.txt       # Dependencies
+├── README.md              # Project overview
+├── .gitignore
+├── index.faiss            # Vector index (auto-generated)
+├── meta.json              # Chunk metadata (auto-generated)
 ```
 
----
+## 📦 Requirements
+- Python 3.8+
+- PyTorch
+- Transformers
+- Sentence-Transformers
+- FAISS
+- Streamlit
 
-## ⚙️ Installation
+## 🌍 Live Demo
+Check out the deployed app here:
+👉 [rag-app-streamlit-khaledyaish](https://rag-app-stremlit-khaledyaish.streamlit.app/)
 
-1. **Clone the repository**
+## 🛠️ How to Run Locally
 ```bash
 git clone https://github.com/KhaledYaish0/rag-streamlit-app.git
 cd rag-streamlit-app
-```
-
-2. **Create virtual environment**
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. **Install requirements**
-```bash
 pip install -r requirements.txt
-```
-
----
-
-## 🧠 How it Works
-
-1. Your document is chunked and vectorized using Sentence Transformers.
-2. FAISS indexes these chunks for efficient similarity search.
-3. When you enter a question, it retrieves top-k chunks and uses BART to summarize the answer.
-4. Everything runs locally – no need to call OpenAI API.
-
----
-
-## 💻 Run the App
-
-```bash
 streamlit run app_streamlit.py
 ```
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-
----
-
-## Author
-
- by [Khaled Yaish](https://github.com/KhaledYaish0)
